@@ -1,0 +1,36 @@
+.fildset-checkbox {
+  position: absolute;
+  left: auto;
+  top: 50%;
+  right: 0px;
+  transform: translate(0%, -50%);
+  z-index: 4;
+
+  .form-check {
+    position: relative;
+  }
+
+  input[type="checkbox"]:checked,
+  input[type="checkbox"]:not(:checked) {
+    position: fixed !important;
+    left: -9999px !important;
+    height: 0px;
+    width: 0px;
+  }
+
+  input[type="checkbox"]:checked + label,
+  input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    svg {
+      width: 30px;
+      height: 20px;
+    }
+
+    &:hover {
+      color: $deep-purple-2;
+    }
+  }
+}

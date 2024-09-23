@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\assets\\styles",
+    "\\src\\assets\\styles\\css",
+    "\\src\\components",
+    "\\src\\scss",
+    "\\src\\scss\\vendor",
+    "\\src\\views"
+  ],
+  "SelectedNode": "\\src\\assets\\styles\\css\\plyr.css",
+  "PreviewInSolutionExplorer": false
+}

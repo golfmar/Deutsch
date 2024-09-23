@@ -1,0 +1,12 @@
+.btn-success {
+  color: $white;
+  border-radius: 3px;
+  background-color: $jungle-green;
+  @include flex-center;
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    color: $hover;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 1);
+  }
+}

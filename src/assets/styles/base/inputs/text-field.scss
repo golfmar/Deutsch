@@ -1,0 +1,35 @@
+.text-field {
+  // float: left;
+  position: relative;
+  @include transition;
+  width: 100%;
+  border: none;
+  &:last-of-type {
+    margin: 0 0 0 0;
+  }
+  input[type="text"],
+  input[type="phone"] {
+  }
+  input[type="text"],
+  input[type="phone"] {
+    &:focus {
+      & + label {
+        transform: translateY(-190%);
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    @include transition;
+    z-index: 2;
+  }
+
+  input[type="text"]:not(:placeholder-shown) + label,
+  input[type="phone"]:not(:placeholder-shown) + label {
+    transform: translateY(-190%);
+  }
+}

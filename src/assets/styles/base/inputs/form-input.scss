@@ -1,0 +1,76 @@
+.form-input {
+  @include flex-center;
+  position: relative;
+  height: 100%;
+  border-radius: 4px;
+  background-color: $white-three;
+  label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    @include transition;
+    @include Text-Style;
+  }
+  input[type="text"] {
+    @include transition;
+    min-height: 36px;
+    padding: 0px 0 0 20px;
+    width: 100%;
+    height: 100%;
+    &:focus,
+    &:not(:placeholder-shown) {
+      min-height: 62px;
+      padding: 10px 0 0 20px;
+      & + label {
+        transform: translateY(-140%);
+      }
+    }
+    &:hover {
+      & + label {
+        color: $hover;
+        svg {
+          fill: $hover;
+          stroke: $hover;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    position: relative;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: auto;
+    right: 1px;
+    @include flex-center;
+  }
+  input[type="submit"] {
+    width: 100%;
+    height: 35px;
+    font-size: 0;
+    background: transparent;
+    cursor: pointer;
+    & + svg {
+      display: block;
+      width: 29px;
+      height: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include transition;
+      z-index: -10;
+      fill: lighten($cherry, 0%);
+    }
+    &:hover {
+      & + svg {
+        fill: lighten($cherry, 25%);
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.btn-blue {
+  @include transition;
+  background-color: $white;
+  @include flex-center;
+  &:hover {
+    color: $hover;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 1);
+  }
+}
